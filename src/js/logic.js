@@ -1,11 +1,12 @@
 import { game } from "./game.js";
+import { players } from "./players.js";
 
 export const restart = () => {
-	game.players[0].score = 0;
-	game.players[1].score = 0;
+	players[0].score = 0;
+	players[1].score = 0;
 
-	game.players[0].selection = "";
-	game.players[1].selection = "";
+	players[0].selection = "";
+	players[1].selection = "";
 
 	showButtons();
 	update();
@@ -34,9 +35,9 @@ export const play = (event) => {
 	const result = getWinner(player1Selection, player2Selection);
 
 	if (result === "win") {
-		setScore(game.players[0]);
+		setScore(players[0]);
 	} else if (result === "lose") {
-		setScore(game.players[1]);
+		setScore(players[1]);
 	}
 
 	update();
@@ -47,8 +48,8 @@ const getSelection = (event) => {
 };
 
 const setSelection = (player1Selection, player2Selection) => {
-	game.players[0].selection = player1Selection;
-	game.players[1].selection = player2Selection;
+	players[0].selection = player1Selection;
+	players[1].selection = player2Selection;
 };
 
 export const setScore = (player) => {
@@ -100,7 +101,7 @@ const showButtons = () => {
 
 const update = () => {
 	if (!game.jsDom) return;
-	game.players.forEach((player, i) => {
+	players.forEach((player, i) => {
 		const index = i + 1;
 		updateMarkup("selection-" + index, player.selection);
 		updateMarkup("score-" + index, player.score);
