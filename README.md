@@ -37,6 +37,12 @@ yarn test
 
 # Run the linter
 yarn lint
+
+# Avoid below warning, using yarn link
+# WARNING in ./src/js/index.js
+# Module Warning (from ./node_modules/eslint-loader/dist/cjs.js):
+# No ESLint configuration found in ..
+yarn link
 ```
 
 _Thanks, Chris_
