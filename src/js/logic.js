@@ -79,6 +79,14 @@ export const getWinner = (player1Selection, player2Selection) => {
 export const updateMarkup = (id, value) => {
 	const element = document.getElementById(id);
 	element.textContent = value || "";
+	if (value !== 0 && id.includes("score")) {
+		setTimeout(() => {
+			element.classList.add("refresh");
+		}, 100);
+		setTimeout(() => {
+			element.classList.remove("refresh");
+		}, 1000);
+	}
 };
 
 const showButtons = () => {
