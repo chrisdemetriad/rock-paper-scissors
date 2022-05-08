@@ -16,6 +16,11 @@ export const setMode = (event) => {
 	restart();
 };
 
+export const setType = (event) => {
+	game.type = event.target.textContent;
+	restart();
+};
+
 export const getTypes = () => {
 	return game.types[game.type];
 };
@@ -80,6 +85,13 @@ const showButtons = () => {
 	if (game.mode === "manual") {
 		document.querySelector(".buttons").style.display = "block";
 		document.getElementById("play").style.display = "none";
+
+		const extendedButtons = document.getElementsByClassName("extended");
+
+		[...extendedButtons].forEach((button) => {
+			const showExtended = game.type === "basic" ? "none" : "inline-block";
+			button.style.display = showExtended;
+		});
 	} else {
 		document.querySelector(".buttons").style.display = "none";
 		document.getElementById("play").style.display = "block";
