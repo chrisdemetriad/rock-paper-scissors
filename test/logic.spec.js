@@ -51,17 +51,17 @@ test("setType() should correctly set the game type", () => {
 	setType(event);
 	expect(game.type).toBe("extended");
 	expect(getTypes()).toStrictEqual({
-		ROCK: ["SCISSORS", "LIZARD"],
+		ROCK: ["SCISSORS", "LIZZARD"],
 		PAPER: ["ROCK", "SPOCK"],
-		SCISSORS: ["PAPER", "LIZARD"],
-		LIZARD: ["SPOCK", "PAPER"],
+		SCISSORS: ["PAPER", "LIZZARD"],
+		LIZZARD: ["SPOCK", "PAPER"],
 		SPOCK: ["SCISSORS", "ROCK"],
 	});
 });
 
 test("getRandomSelection() should return a string match", () => {
 	expect(getRandomSelection()).not.toBeUndefined();
-	expect(getRandomSelection()).toMatch(/ROCK|PAPER|SCISSORS|LIZARD|SPOCK/);
+	expect(getRandomSelection()).toMatch(/ROCK|PAPER|SCISSORS|LIZZARD|SPOCK/);
 });
 
 // types
@@ -71,9 +71,9 @@ test("getWinner() should get the right value", () => {
 	expect(getWinner("SCISSORS", "ROCK")).toBe("lose");
 	game.type = "extended";
 	expect(getWinner("ROCK", "SPOCK")).toBe("lose");
-	expect(getWinner("PAPER", "LIZARD")).toBe("lose");
-	expect(getWinner("SCISSORS", "LIZARD")).toBe("win");
-	expect(getWinner("LIZARD", "LIZARD")).toBe("tie");
+	expect(getWinner("PAPER", "LIZZARD")).toBe("lose");
+	expect(getWinner("SCISSORS", "LIZZARD")).toBe("win");
+	expect(getWinner("LIZZARD", "LIZZARD")).toBe("tie");
 	expect(getWinner("SPOCK", "SCISSORS")).toBe("win");
 });
 

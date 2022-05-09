@@ -9,11 +9,11 @@ export const game = {
 			SCISSORS: ["PAPER"],
 		},
 		extended: {
-			ROCK: ["SCISSORS", "LIZARD"],
+			ROCK: ["SCISSORS", "LIZZARD"],
 			PAPER: ["ROCK", "SPOCK"],
-			SCISSORS: ["PAPER", "LIZARD"],
-			LIZARD: ["SPOCK", "PAPER"],
+			SCISSORS: ["PAPER", "LIZZARD"],
 			SPOCK: ["SCISSORS", "ROCK"],
+			LIZZARD: ["SPOCK", "PAPER"],
 		},
 	},
 	players: [

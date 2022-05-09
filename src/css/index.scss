@@ -39,7 +39,15 @@ a {
 	text-decoration: none;
 }
 
-.mr-auto {
+.mr-100 {
+	margin-right: 100px;
+}
+
+.ml-100 {
+	margin-left: 100px;
+}
+
+.modes {
 	margin-right: 100px;
 }
 
@@ -59,9 +67,6 @@ main {
 		align-content: center;
 		justify-content: space-around;
 		flex-direction: column;
-
-		&:first-child {
-		}
 		width: 100%;
 
 		span[id^="score-"] {
@@ -101,6 +106,4 @@ button {
 	cursor: pointer;
 	color: white;
 	border-radius: 2px;
-	&.extended {
-	}
 }
