@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap");
+@import "reset";
+
+html,
+body {
+	font-family: Arial, sans-serif;
+	background: #1f2027;
+	color: #fff;
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: auto;
+}
+
+body {
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-content: space-between;
+	box-sizing: border-box;
+	height: 100%;
+	flex-direction: column;
+}
+
+header {
+	margin: 20px 0;
+	h1 {
+		font-size: 4rem;
+		font-weight: 400;
+	}
+}
+
+a {
+	border: 1px solid #fff;
+	color: #a9adc1;
+	padding: 5px 10px;
+	font-size: 13px;
+	border-radius: 2px;
+	text-decoration: none;
+}
+
+.mr-auto {
+	margin-right: 100px;
+}
+
+.settings {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	display: flex;
+	flex: 1;
+
+	section {
+		display: flex;
+		width: 100%;
+		align-content: center;
+		justify-content: space-around;
+		flex-direction: column;
+
+		&:first-child {
+		}
+		width: 100%;
+
+		span[id^="score-"] {
+			font-size: 8rem;
+			font-weight: 600;
+			color: #ffc0cb;
+			filter: alpha(opacity=50);
+			-moz-opacity: 0.5;
+			-khtml-opacity: 0.5;
+			opacity: 0.5;
+			&.refresh {
+				transition: opacity 0.1s ease-in-out;
+				-webkit-transition: all 1s;
+				filter: alpha(opacity=100);
+				-moz-opacity: 1;
+				-khtml-opacity: 1;
+				opacity: 1;
+			}
+		}
+
+		span[id^="selection"] {
+			font-size: 2.5rem;
+			color: cadetblue;
+		}
+	}
+}
+
+nav,
+#play {
+	margin: 20px auto;
+}
+
+button {
+	padding: 10px 20px;
+	border: none;
+	background: cornflowerblue;
+	cursor: pointer;
+	color: white;
+	border-radius: 2px;
+	&.extended {
+	}
+}

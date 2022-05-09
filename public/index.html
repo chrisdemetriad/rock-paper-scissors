@@ -11,6 +11,20 @@
 			<h1 role="banner">Rock Paper Scissors</h1>
 		</header>
 
+		<div class="settings">
+			<span class="mode">
+				<a href="#" class="mode">manual</a>
+				<a href="#" class="mode">auto</a>
+			</span>
+			<span>
+				<a href="#" id="restart">restart</a>
+			</span>
+			<span class="type">
+				<a href="#" class="type">basic</a>
+				<a href="#" class="type">extended</a>
+			</span>
+		</div>
+
 		<nav role="menu" class="buttons">
 			<button role="button">ROCK</button>
 			<button role="button">PAPER</button>
@@ -19,34 +33,19 @@
 			<button role="button" class="extended">SPOCK</button>
 		</nav>
 
-		<div class="mode">
-			<a href="#" class="">manual</a>
-			<a href="#" class="">auto</a>
-		</div>
-
-		<div class="type">
-			<a href="#" class="">basic</a>
-			<a href="#" class="">extended</a>
-		</div>
-
-		<a href="#" id="restart">restart</a>
+		<button id="play" role="button">Play</button>
 
 		<main>
 			<section id="player1" class="player">
-				<p>
-					<span>You</span>
-					<span id="score-1">0</span>
-				</p>
-				<p id="selection-1"></p>
-				<button id="play" role="button">Play</button>
+				<span>You</span>
+				<span id="score-1">0</span>
+				<span id="selection-1"></span>
 			</section>
 
 			<section id="player2" class="player">
-				<p>
-					<span>Computer</span>
-					<span id="score-2">0</span>
-				</p>
-				<p id="selection-2"></p>
+				<span>Computer</span>
+				<span id="score-2">0</span>
+				<span id="selection-2"></span>
 			</section>
 		</main>
 	</body>
