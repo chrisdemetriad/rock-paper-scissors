@@ -2,9 +2,6 @@
 	"name": "frontend-developer-test",
 	"description": "Gumtree UK frontend developer test project",
 	"version": "3.0.0",
-	"engines": {
-		"node": "14.19.2"
-	},
 	"repository": {
 		"type": "git",
 		"url": "git@github.com:gumtreeuk/rockpaperscissors.git"
